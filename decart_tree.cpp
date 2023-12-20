@@ -2,13 +2,14 @@
 #include <queue>
 
 DTree::DTree(DTree &other){
-	Node tmp_node(other.get_root().key);
-	root = &tmp_node;
+	Node *tmp = new Node(other.get_root().key);
+	root = tmp;
 }
 
 DTree::DTree(DTree &&other){
-	Node tmp_node(other.get_root().key);
-	root = &tmp_node;
+	Node *tmp = other.get_root();
+	std::swap(root, tmp);
+	delete tmp;
 }
 
 DTree::DTree(){

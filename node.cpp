@@ -1,5 +1,10 @@
 #include "node.hpp"
 
+Node::~Node(){
+    delete l;
+    delete r;
+}
+
 Node* Nodes::merge (Node *l, Node *r) {
     if (!l) return r;
     if (!r) return l;

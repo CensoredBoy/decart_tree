@@ -7,16 +7,21 @@ class DTree
 {
 	Node* root;
 	public:
-	DTree(int x);
-	DTree();
-	DTree(DTree &other);
-	DTree(DTree &&other);
+	DTree(int x) noexcept;
+	DTree() noexcept;
+	DTree(DTree &other) noexcept;
+	DTree(DTree &&other) noexcept;
 	~DTree();
 	void insert(int x);
 	void remove(int x);
 	bool find(int x);
 	Node* get_root() { return root; }
 	std::vector<int> ger_vector();
+	DTree& operator+=(const DTree&) = delete;
+	DTree& operator==(const DTree&) = delete;
+	DTree& operator-=(const DTree&) = delete;
+	DTree& operator*=(const DTree&) = delete;
+	DTree& operator/=(const DTree&) = delete;
 
 };
 

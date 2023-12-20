@@ -11,6 +11,7 @@ struct Node {
     int key, prior;
     Node *l = 0, *r = 0;
     Node (int _key): key(_key), prior(_key){}
+    ~Node();
 };
 
 
