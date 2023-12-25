@@ -41,7 +41,7 @@ bool DTree::find(int x){
 	return Nodes::find(root, x);
 }
 
-std::vector<int> DTree::ger_vector(){
+std::vector<int> DTree::get_vector(){
 	std::vector<int> v;
 	std::queue<Node*> q;
 	q.push(root);
