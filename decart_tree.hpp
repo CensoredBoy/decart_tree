@@ -16,7 +16,7 @@ class DTree
 	void remove(int x);
 	bool find(int x);
 	Node* get_root() { return root; }
-	std::vector<int> ger_vector();
+	std::vector<int> get_vector();
 	DTree& operator+=(const DTree&) = delete;
 	DTree& operator==(const DTree&) = delete;
 	DTree& operator-=(const DTree&) = delete;
